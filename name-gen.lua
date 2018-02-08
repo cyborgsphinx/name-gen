@@ -6,11 +6,11 @@ phonemes = { 'ay', 'a', 'b', 'k', 'd', 'ee', 'ea',
              'sh', 'wh', 'ch', 'th', 'ng', 'er' }
  
 math.randomseed(os.time())
-num = 3
-if arg[1] ~= nil then
+--num = 3
+--if arg[1] ~= nil then
     n = tonumber(arg[1])
-    num = (n > 3) and n or 3
-end
+    num = n or 3 -- default to 3
+--end
 out = ''
 for i=1,num do
     val = math.random(table.getn(phonemes))
